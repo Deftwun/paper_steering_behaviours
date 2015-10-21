@@ -1,0 +1,18 @@
+<script>
+  function Spatial(){
+    return{x:0,y:0};
+  };
+  
+  function a(){
+    return{s:new Spatial()};
+  };
+  function b(x){
+    return {mySpatial:x.s};
+  };
+  
+  
+  foo = new a();
+  bar = new b(foo);
+  
+  console.log(foo,bar);
+</script>
