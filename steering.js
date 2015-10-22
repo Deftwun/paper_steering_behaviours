@@ -62,8 +62,6 @@ window.steering = {
     if ((target - ahead).length > target_radius)
       return new Point();
     return f;
-    
-    
   }
 
 };
