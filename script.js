@@ -180,9 +180,7 @@ var Unit = function(options){
     enabled : true,
     position : view.center,
     velocity : new Point(),
-    brain : {
-      moveAgent:null
-    },
+    brain : null,
     vision : null,
   }
   
@@ -202,8 +200,8 @@ var Unit = function(options){
 
   this.update = function(){
     if (this.enabled){
-      this.vision.update();
-      this.brain.update();
+      if (this.vision) this.vision.update();
+      if (this.brain) this.brain.update();
     }
     this.drawable.position = this.position;
     this.drawable.rotation = this.velocity.angle;
